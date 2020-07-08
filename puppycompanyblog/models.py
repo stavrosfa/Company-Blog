@@ -35,7 +35,7 @@ class BlogPost(db.Model):
 
     users = db.relationship(User)
 
-    id = db.Column(db.Interger, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
